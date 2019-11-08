@@ -10,8 +10,17 @@
           <%= link_to "home", cocktails_path, class: "btn" %>
         </div>
       </div>
-      <div class="new-container-image drink-image">
+      <% if @cocktail.photo.file  %>
+        <div class="new-container-image" style="
+        background-image:
+        linear-gradient(rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)),
+        url('<%= cl_image_path @cocktail.photo, crop: :fill %>')">
+      <% else %>
+        <div class="new-container-image drink-image">
+      <% end %>
       </div>
     </div>
   </div>
-  </div>
+</div>
+

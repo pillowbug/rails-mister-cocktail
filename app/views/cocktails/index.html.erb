@@ -4,13 +4,22 @@
 </div>
 <div class="container">
   <p>Tonight's story is "Catherine", an unconventional romantic horror. A man with a certain "curse" has a terrifying week. Our hero is Vincent Brooks, Age 32. He's an earnest and kind man, but one day, we see he starts having nightmares. On top of that, a torrent of sweet seduction sweeps down upon him.</p>
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap card-holder animated fadeInUp">
       <% @cocktails.each do |cocktail|  %>
         <div class="card">
-          <%= link_to cocktail.name, cocktail_path(cocktail)  %>
-          <% cocktail.ingredients.each do |ingredient| %>
-          <%= ingredient.name.downcase %>
-          <%end %>
+          <% if cocktail.photo.file %>
+            <div class="home-card-image" style="background-image: url('<%= cl_image_path cocktail.photo, crop: :fill %>'); background-size: cover;">
+            </div>
+          <% else %>
+            <div class="home-card-image" style="background-image: url('https://images.pexels.com/photos/3078831/pexels-photo-3078831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); background-size: cover; background-position: center;">
+            </div>
+          <% end %>
+          <div class="home-card-info d-flex flex-column">
+            <%= link_to cocktail.name, cocktail_path(cocktail)  %>
+            <% cocktail.ingredients.each do |ingredient| %>
+              <%= ingredient.name.downcase %>
+            <%end %>
+          </div>
         </div>
       <% end %>
     </div>
