@@ -11,3 +11,159 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: #030303;
+  position:relative;
+}
+
+h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; }
+p { font-family: 'Roboto Condensed', arial, sans-serif; font-size: 18px;}
+
+.btn, h1, h2, p { color: white; }
+
+a.btn-banner { color: white !important; text-decoration: none;}
+
+
+/* nav styles */
+.navbar{
+  background: none;
+}
+
+.navbar p{
+  margin: 0;
+  padding-left: 16px;
+  padding-bottom: 0;
+}
+
+.nav-btn {
+  font-family: 'Roboto Condensed', sans-serif, arial;
+  padding: 16px;
+  text-decoration: none !important;
+  color: white !important;
+}
+.navbar a {
+  text-decoration: none !important;
+
+}
+
+a.nav-btn:hover {
+  color: #f336a5;
+}
+
+
+/* new cocktail page */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.new-bg {
+  background:
+    linear-gradient(180deg,
+      rgba(0, 0, 0, 0.10),
+      rgba(3, 3, 3, 1)
+    ),
+    url(https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat fixed center;
+  background-color:black;
+  height: 80vh;
+  color: #eee;
+  padding-top: 8vh;
+  position: relative;
+}
+
+.new-container {
+  margin: 0 auto;
+  height: 70vh;
+  width: 70vw;
+  z-index: 1;
+  box-shadow:  0px 0px 16px 16px rgba(0,0,0, 0.5);
+  animation: fadeInUp 0.75s ease-in-out 0s forwards;
+  border-top: 16px solid #03dbfc;
+}
+
+.new-drink-info{
+  background-color: white;
+  color: #303030;
+  width: 50%;
+  padding: 75px;
+  font-family: 'Roboto Condensed', sans-serif, arial;
+}
+
+.new-drink-info input {
+  background-color: white;
+  color: #303030;
+  border: 1px solid black;
+  padding: 24px 24px;
+}
+
+.new-drink-info h1 {
+  color: #303030;
+  border-left: 8px solid #f336a5;
+  padding-left: 16px;
+  margin-bottom: 24px;
+}
+
+.new-drink-info p {
+  color: #303030;
+}
+
+.new-drink-info a {
+  font-family: 'Roboto Condensed', sans-serif, arial;
+  border: 1px solid #303030;
+  padding: 16px;
+  width: 159px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  animation-delay: 1s;
+}
+
+.new-drink-info a {
+  text-decoration: none !important;
+  color: #303030 !important;
+}
+
+.new-container-image{
+  width: 50%;
+  background: url('https://images.pexels.com/photos/1426620/pexels-photo-1426620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center;
+  background-position: top;
+  background-size: cover;
+}
+
+.dose-image {
+  background: url('https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center;
+  background-position: top;
+  background-size: cover;
+}
+
+.drink-image {
+  background: url('https://images.pexels.com/photos/3078831/pexels-photo-3078831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center;
+  background-position: top;
+  background-size: cover;
+}
+
+// footer styles
+
+.footer {
+  width: 100%;
+  background-color: #030303;
+  height: 10vh;
+  margin-top: auto;
+  text-align: center;
+  padding-top: 25vh;
+}
+
+
+
+
+

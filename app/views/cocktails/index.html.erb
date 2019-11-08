@@ -1,0 +1,20 @@
+<div class="home-banner">
+  <h1 class="display-1">Welcome to <br>The Stray Sheep</h1>
+  <%= link_to "create new cocktail", new_cocktail_path, class: 'btn-banner' %>
+</div>
+<div class="container">
+  <p>Tonight's story is "Catherine", an unconventional romantic horror. A man with a certain "curse" has a terrifying week. Our hero is Vincent Brooks, Age 32. He's an earnest and kind man, but one day, we see he starts having nightmares. On top of that, a torrent of sweet seduction sweeps down upon him.</p>
+    <div class="d-flex flex-wrap">
+      <% @cocktails.each do |cocktail|  %>
+        <div class="card">
+          <%= link_to cocktail.name, cocktail_path(cocktail)  %>
+          <% cocktail.ingredients.each do |ingredient| %>
+          <%= ingredient.name.downcase %>
+          <%end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="footer d-flex justify-content-center align-items-center">
+      <p>Made with love, coffee, and the power of anime by Gerard</p>
+    </div>
+</div>

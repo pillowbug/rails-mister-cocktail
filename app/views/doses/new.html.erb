@@ -1,0 +1,18 @@
+
+<div class="new-bg"><div class="container">
+    <div class="new-container d-flex">
+      <div class="new-drink-info">
+        <h1><%= @cocktail.name %></h1>
+           <%= simple_form_for [@cocktail, @ingredient, @dose] do |d| %>
+              <%= d.input :description %>
+              <%= d.association :ingredient, as: :select  %>
+           <%= d.submit %>
+          <%end %>
+        <div>
+        </div>
+      </div>
+      <div class="new-container-image dose-image">
+      </div>
+    </div>
+  </div>
+  </div>

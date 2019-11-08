@@ -1,0 +1,58 @@
+.home-banner {
+  background:
+    linear-gradient(180deg,
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 1)
+    ),
+    url(https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-color:black;
+  height: 80vh;
+  color: #eee;
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0.2;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.home-banner h1 {
+  margin-left: 2em;
+  width: 60%;
+  border-left: 16px solid #f336a5;
+  font-weight: 600;
+  padding-left: 24px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+.btn-banner{
+  font-family: 'Roboto Condensed', sans-serif, arial;
+  border: 1px solid white;
+  padding: 16px;
+  margin-top: 24px;
+  margin-left: 240px;
+  width: 159px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+  animation-delay: 1s;
+}
+
+.btn-banner a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.container { height: 100vh; }
+

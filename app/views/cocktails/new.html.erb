@@ -1,0 +1,13 @@
+<div class="new-bg">
+  <div class="new-container d-flex">
+    <div class="new-container-image">
+    </div>
+    <div class="new-drink-info">
+      <h1>Add a drink</h1>
+      <%= simple_form_for (@cocktail) do |c| %>
+      <%= c.input :name %>
+      <%= c.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
